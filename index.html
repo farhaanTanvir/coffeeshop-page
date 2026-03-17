@@ -11,22 +11,33 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
+    
+
     <header id="header">
-      <nav id="nav-bar">
-        <img src="images\coffee-icon-19.jpg" alt="Logo" id="header-img" />
+      <div class="offscreen-menu">
+        
+      <ul>
+        <li class="dismiss-container"><div class="dismiss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></div></li>
+          <li><a class="hamgs hamm" href="#hero">Get Started</a></li>
+          <li><a class="hamfeatures hamm" href="#features">Features</a></li>
+          <li><a class="product hamm" href="#products">Products</a></li>
+          <li><a class="footer hamm" href="#footer">Contact</a></li>
+        </ul>
+    </div>
+      <nav id="nav-bar" >
+        <img src="images\coffee-icon-19.jpg" alt="Logo" id="header-img" class="firstitem"/>
         <ul>
-          <li><a class="nav-link" href="#hero">Get Started</a></li>
-          <li><a class="nav-link" href="#features">Features</a></li>
-          <li><a class="nav-link" href="#products">Products</a></li>
-          <li><a class="nav-link" href="#footer">Contact</a></li>
+          <li class="noham"><a class="nav-link" href="#hero">Get Started</a></li>
+
+          <li class="noham"><a class="nav-link" href="#features">Features</a></li>
+
+          <li class="noham"><a class="nav-link" href="#products">Products</a></li>
+
+          <li class="noham"><a class="nav-link lastitem" href="#footer">Contact</a></li>
+
+          <li class="ham"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></li>
         </ul>
       </nav>
     </header>
@@ -35,18 +46,20 @@
       <section id="hero">
         <h1>Coffee, Crafted Right</h1>
         <p>From bean to cup, we do it differently</p>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-          <div class="hero-form">
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email address"
-              required
-            />
-            <button>Get Started</button>
-            <p class="heroc2a">★★★★★ Loved by 10,000+ coffee lovers</p>
-          </div>
-        </form>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="72d2cdb9-6ad1-4e1f-a040-848b71f625d4">
+<input type="hidden" name="redirect" value="https://inquisitive-brioche-f7cf18.netlify.app/">
+  <div class="hero-form">
+    <input
+      type="email"
+      id="email"
+      name="email"  placeholder="Enter your email address"
+      required
+    />
+    <button type="submit">Get Started</button>
+    <p class="heroc2a">★★★★★ Loved by 10,000+ coffee lovers</p>
+  </div>
+</form>
       </section>
       <section id="features">
         <h2>Our Features</h2>
@@ -115,7 +128,7 @@
         <h4>Instant Coffee</h4>
         <div class="instant grid">
         <div class="item">
-            <img src="images\coffee-med\30054603-1.webp" alt="instant" class="sp"/>
+            <img src="images\coffee-med\instant-milk.webp" alt="instant" class=""/>
             <p class="price">$1.99</p>
             <p class="name">Instant Coffee
             </p>
@@ -134,7 +147,7 @@
         </div>
         
         <div class="item">
-            <img src="images\coffee-med\instant mini.webp" alt="instant-mini" class="sp" />
+            <img src="images\coffee-med\instant mini.webp" alt="instant-mini" class="" />
             <p class="price">$0.19</p>
             <p class="name">Instant Coffee - Mini
             </p>
@@ -143,23 +156,20 @@
         <h4>Our Other Products</h4>
         <div class="others grid">
         <div class="item">
-            <img src="images\coffee-med\grider1.jpg" alt="grinder" class="xtraMargin" />
-            <p class="price">$199</p>
-            <p class="name">Coffee Grinder
-            </p>
+            <img src="images\coffee-med\grider1.jpg" alt="grinder" class="" />
+            <p class="price">$199.99</p>
+            <p class="name">Coffee Grinder</p>
         </div>
         <div class="item">
-            <img src="images\coffee-med\french_press.jpg" alt="french_press" class="xtraMargin" />
-            <p class="price">$79</p>
-            <p class="name">French Press
-            </p>
+            <img src="images\coffee-med\french_press.jpg" alt="french_press" class="" />
+            <p class="price">$79.99</p>
+            <p class="name">French Press</p>
 
         </div>
         <div class="item">
-            <img src="images\coffee-med\mug.webp" alt="mug" />
+            <img src="images\coffee-med\french_press.jpg" alt="mug" class=""/>
             <p class="price">$9.99</p>
-            <p class="name">Coffee Mug
-            </p>
+            <p class="name">Coffee Mug</p>
         </div>
         </div>
       </section>
@@ -201,6 +211,6 @@
     <p>&copy; 2025 Farhan Coffee Shop. All rights reserved.</p>
   </div>
 </footer>
-    </footer>
+<script src="script.js"></script>
   </body>
 </html>

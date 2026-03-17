@@ -1,13 +1,21 @@
+:root {
+  --topp: -500%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
+
 #header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 800;
 }
 
 nav {
@@ -37,11 +45,11 @@ ul li a {
   position: relative;
 }
 
-ul li a:hover {
+.nav-link:hover {
   color: #6c63ff;
 }
 
-ul li a::after {
+.nav-link::after {
   content: "";
   position: absolute;
   width: 0;
@@ -52,13 +60,61 @@ ul li a::after {
   transition: width 0.3s ease;
 }
 
-ul li a:hover::after {
+.nav-link:hover::after {
   width: 100%;
 }
+
+
+.offscreen-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30vh;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  z-index: 900;
+  top: var(--topp);
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.offscreen-menu a {
+  padding: 20px;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
 
 #header-img {
   width: 60px;
   height: auto;
+}
+
+.firstitem {
+  margin-left: 1rem;
+}
+
+.lastitem {
+  margin-right: 1rem;
+}
+
+.noham {
+  display: none;
+}
+
+.ham {
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.hamburger {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
 }
 
 #hero {
@@ -133,19 +189,22 @@ ul li a:hover::after {
 }
 
 #hero button {
-  height: 30px;
-  padding: 0 35px;
+  height: 35px;
   border: 2px solid black;
   border-radius: 4px;
   display: flex;
+  background-color: #6c63ff;
   justify-content: center;
   flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 #hero button:hover {
-  background-color: #6c63ff;
+  background-color: #4f4ab9;
   color: white;
 }
 
@@ -212,19 +271,20 @@ h2::after {
 .item img {
   width: 100%;
   text-align: center;
+  border-radius: 20px
 }
 
 .name {
   font-size: 1.5rem;
   font-weight: 600;
-  padding-bottom: 3rem;
-  padding-left: 18px;
+  padding-bottom: 24px;
   margin-top: 15px;
+  margin-left: 27px;
 }
 
 .price {
   padding: 8px 15px;
-  margin-left: 18px;
+  margin-left: 27px;
   font-size: 1rem;
   border: 1px solid #76767a;
   width: fit-content;
@@ -235,31 +295,7 @@ h2::after {
   border-radius: 50px;
   font-weight: 600;
   color: #6c63ff;
-}
-
-.item button {
-  height: 45px;
-  width: 70%;
-  border: 2px solid black;
-  border-radius: 20px;
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.item button:hover {
-  background-color: #6c63ff;
-  color: white;
-}
-
-.sp {
-  transform: scale(0.85);
-}
-
-.xtraMargin {
-  margin-bottom: 20px;
-  border-radius: 20px;
+  margin-top: 15px;
 }
 
 h4 {
@@ -366,6 +402,22 @@ h4 {
 @media only screen and (min-width: 768px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .noham {
+    display: block;
+  }
+
+  .ham {
+    display: none;
+  }
+
+  .summon {
+    display: none;
+  }
+
+  .offscreen-menu {
+    display: none;
   }
 }
 
