@@ -3,11 +3,15 @@ const getStartedHam = document.querySelector('.hamgs');
 const hamFeatures = document.querySelector('.hamfeatures');
 const hamProduct = document.querySelector('.product');
 const hamFooter = document.querySelector('.footer');
+const page = document.querySelector('.shadow');
+
+
 
 function hideHam() {
     const root = document.documentElement;
-    root.style.setProperty('--topp', '-500%');
+    root.style.setProperty('--topp', '-700%');
     document.removeEventListener('click', insideHam);
+    page.classList.remove('dark')
 }
 
 
@@ -16,7 +20,8 @@ function showHam(event) {
     const root = document.documentElement;
     root.style.setProperty('--topp', '0%');
     document.addEventListener('click', insideHam);
-    event.stopPropagation()
+    event.stopPropagation();
+    page.classList.add('dark')
 }
 
 function insideHam(event) {
@@ -30,3 +35,14 @@ function insideHam(event) {
 
 
 hamButton.addEventListener('click', showHam);
+
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 1000) {
+        document.querySelector('.backtop').classList.add('backtopshow');
+    } else {
+        document.querySelector('.backtop').classList.remove('backtopshow');
+    }
+});

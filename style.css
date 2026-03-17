@@ -1,5 +1,9 @@
 :root {
-  --topp: -500%;
+  --topp: -700%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -17,6 +21,14 @@ button {
   top: 0;
   z-index: 800;
 }
+
+/* .dark {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s ease-in-out;
+} */
+
+
 
 nav {
   background: #ffffff;
@@ -65,11 +77,12 @@ ul li a {
 }
 
 
+
 .offscreen-menu ul {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 30vh;
+  height: 50vh;
   background-color: white;
   width: 100%;
   position: absolute;
@@ -86,9 +99,61 @@ ul li a {
   font-weight: 600;
 }
 
+.shadow {
+  position: relative;
+}
+
+.shadow.dark::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 850;
+  pointer-events: none;
+  display: block;
+}
+
+.backtop {
+  position: fixed;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #6c63ff;
+  color: rgb(255, 255, 255) !important;
+  bottom: 2rem;
+  right: 2rem;
+  border: 1px solid rgb(0, 0, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.backtop a {
+  text-decoration: none;
+  color: inherit
+}
+
+.backtop a:link,
+.backtop a:visited,
+.backtop a:hover,
+.backtop a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.backtopshow {
+  opacity: 1;
+  visibility: visible;
+}
 
 #header-img {
-  width: 60px;
+  width: 42px;
   height: auto;
 }
 
@@ -107,6 +172,11 @@ ul li a {
 .ham {
   margin-right: 10px;
   padding: 10px;
+}
+
+.offscreen-menu li {
+  padding-top: 10px;
+  padding-bottom: 10px
 }
 
 .hamburger {
@@ -215,7 +285,7 @@ h2 {
 
 .heroc2a {
   padding-top: 1.5rem;
-  transform: scale(0.76);
+  font-size: 0.85rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -266,6 +336,12 @@ h2::after {
   margin: 1rem auto;
   padding-bottom: 15px;
   border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .item img {
