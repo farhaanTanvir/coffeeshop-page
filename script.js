@@ -9,7 +9,7 @@ const page = document.querySelector('.shadow');
 
 function hideHam() {
     const root = document.documentElement;
-    root.style.setProperty('--topp', '-700%');
+    root.style.setProperty('--topp', '-900%');
     document.removeEventListener('click', insideHam);
     page.classList.remove('dark')
 }

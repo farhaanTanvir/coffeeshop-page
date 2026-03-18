@@ -1,5 +1,5 @@
 :root {
-  --topp: -700%;
+  --topp: -900%;
 }
 
 html {
@@ -256,6 +256,8 @@ ul li a {
   margin-top: 10px;
   padding-left: 1rem;
   padding-right: 1rem;
+  border-radius: 6px;
+
 }
 
 #hero button {
@@ -271,6 +273,7 @@ ul li a {
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
+  border-radius: 6px;
 }
 
 #hero button:hover {
@@ -282,6 +285,9 @@ h2 {
   font-family: "Montserrat", sans-serif;
 }
 
+#features h2 {
+  margin-top: 20px;
+}
 
 .heroc2a {
   padding-top: 1.5rem;
@@ -303,6 +309,7 @@ h2 {
   align-self: center;
 }
 
+
 #features {
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
@@ -314,7 +321,8 @@ h2 {
   font-size: 2.1rem;
 }
 
-.grid {
+.grid,
+.grid-features {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -322,7 +330,7 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  width: 60%;
+  width: 80px;
   height: 3px;
   background: #6c63ff;
   margin: 0.5rem auto 0 auto;
@@ -463,21 +471,45 @@ h4 {
   transform: scale(1.1);
 }
 
-.social-icons img {
+.social-icons svg {
   width: 35px;
   height: auto;
   border-radius: 20px;
   filter: invert(1);
+  color: black
 }
 
-.social-icons img:hover {
+.credit {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.social-icons svg:hover {
   filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(220deg);
   /* Purple on hover */
 }
 
-@media only screen and (min-width: 768px) {
-  .grid {
+@media only screen and (min-width: 600px) {
+
+  /* ipad mini */
+  .grid,
+  .grid-features {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-features {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #products,
+  #features {
+    padding: 0 1rem
+  }
+
+  .name {
+    font-size: 1.2rem;
   }
 
   .noham {
@@ -495,9 +527,43 @@ h4 {
   .offscreen-menu {
     display: none;
   }
+
+  #hero h1 {
+    font-size: 3.1rem;
+  }
+
+  #hero p {
+    font-size: 1.3rem;
+  }
+
+  #hero input {
+    height: 50px;
+    font-size: 1.15rem
+  }
+
+  #hero button {
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 2.4rem
+  }
+
+  h4 {
+    text-align: left;
+    margin-left: 2.2rem;
+    font-size: 1.7rem
+  }
 }
 
-@media only screen and (min-width: 820px) {
+
+@media only screen and (min-width: 1024px) {
+
+  h4 {
+    margin-left: 2.9rem;
+  }
+
   .item {
     width: 90%;
     justify-self: center;
@@ -506,22 +572,80 @@ h4 {
     margin-right: 0;
   }
 
+  .grid-features {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
   .grid {
-    grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
   }
-}
 
-@media only screen and (min-width: 1024px) {
-  h4 {
-    text-align: left;
-    margin-left: 3rem;
+  #hero h1 {
+    font-size: 4rem;
+  }
+
+  #hero p {
+    font-size: 1.7rem;
+  }
+
+  #hero input {
+    height: 60px;
+    font-size: 1.2rem
+  }
+
+  #hero button {
+    height: 50px;
+    font-size: 1.3rem;
   }
 }
 
-@media only screen and (min-width: 1900px) {
+@media only screen and (min-width: 1300px) {
   .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
+  #hero h1 {
+    font-size: 3rem;
+    padding-top: 50px;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  #hero input {
+    height: 40px;
+    font-size: 1rem
+  }
+
+  #hero button {
+    height: 30px;
+    font-size: 1.1rem;
+    padding: 15px
+  }
+
+  .grid-features {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .price {
+    font-size: 1.1rem
+  }
+}
+
+
+@media only screen and (min-width: 1440px) {
+  .grid-features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
