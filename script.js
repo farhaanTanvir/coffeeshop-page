@@ -3,7 +3,8 @@ const getStartedHam = document.querySelector('.hamgs');
 const hamFeatures = document.querySelector('.hamfeatures');
 const hamProduct = document.querySelector('.product');
 const hamFooter = document.querySelector('.footer');
-const page = document.querySelector('.shadow');
+const filter = document.querySelector('.dark-filter');
+const header = document.querySelector('#header');
 
 
 
@@ -11,7 +12,8 @@ function hideHam() {
     const root = document.documentElement;
     root.style.setProperty('--topp', '-900%');
     document.removeEventListener('click', insideHam);
-    page.classList.remove('dark')
+    filter.classList.remove('filter-active');
+    header.classList.remove('header-active');
 }
 
 
@@ -21,7 +23,8 @@ function showHam(event) {
     root.style.setProperty('--topp', '0%');
     document.addEventListener('click', insideHam);
     event.stopPropagation();
-    page.classList.add('dark')
+    filter.classList.add('filter-active');
+    header.classList.add('header-active');
 }
 
 function insideHam(event) {
