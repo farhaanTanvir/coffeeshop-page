@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="dark-filter"></div>
@@ -21,7 +25,7 @@
         <li class="dismiss-container"><div class="dismiss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></div></li>
           <li><a class="hamfeatures hamm" href="#features">Features</a></li>
           <li><a class="product hamm" href="#products">Products</a></li>
-          <li><a class="footer hamm" href="#footer">Contact</a></li>
+          <li><a class="footer hamm" href="#purchase">Place Order</a></li>
         </ul>
     </div>
       <nav id="nav-bar" >
@@ -32,7 +36,7 @@
 
           <li class="noham"><a class="nav-link" href="#products">Products</a></li>
 
-          <li class="noham"><a class="nav-link lastitem" href="#footer">Contact</a></li>
+          <li class="noham"><a class="nav-link lastitem" href="#purchase">Place Order</a></li>
 
           <li class="ham"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></li>
         </ul>
@@ -47,11 +51,11 @@
       <section id="hero">
         <div class="hero-items">
         <p class="estd" >EST. 2025</p>
-        <h1 class="hero-text">Coffee, Crafted Right</h1>
+        <h1 class="hero-text">Coffee,<br> Crafted Right</h1>
         <p class="desc">From bean to cup, we do it differently</p>
         <div class="btn-container">
-          <a href="" class="hero-text"><button class="btn1">EXPLORE ITEMS</button></a>
-          <a href="" class="hero-text"><button class="btn2">PLACE ORDER</button></a>
+          <a href="#products" class="hero-text"><button class="btn1">EXPLORE ITEMS</button></a>
+          <a href="#purchase" class="hero-text"><button class="btn2">PLACE ORDER</button></a>
         </div>
         </div>
       </section>
@@ -94,7 +98,7 @@
         <div class="beans grid">
           <div class="item">
             <img src="images/Gemini_Generated_Image_8pipc38pipc38pip.png" alt="medium_beans" />
-            <p class="price">$1.99</p>
+            <p class="price">$12.00</p>
 
             <p class="name">Medium Roasted Beans
             </p>
@@ -102,19 +106,19 @@
        
          <div class="item">
             <img src="images/Gemini_Generated_Image_qua9x0qua9x0qua9.png" alt="dark_beans" />
-            <p class="price">$2.49</p>
+            <p class="price">$14.00</p>
             <p class="name">Dark Roasted Beans
             </p>
         </div>
          <div class="item">
             <img src="images/Gemini_Generated_Image_swpiwrswpiwrswpi.png" alt="light_beans" />
-            <p class="price">$1.49</p>
+            <p class="price">$13.00</p>
             <p class="name">Light Roasted Beans
             </p>
         </div>
         <div class="item">
             <img src="images/Gemini_Generated_Image_8lbsfh8lbsfh8lbs.png" alt="ground_beans" />
-            <p class="price">$1.79</p>
+            <p class="price">$11.00</p>
             <p class="name">Ground Coffee Beans
             </p>
         </div>
@@ -123,32 +127,32 @@
         <div class="instant grid">
         <div class="item">
             <img src="images/Gemini_Generated_Image_b9uy8ab9uy8ab9uy.png" alt="instant" class=""/>
-            <p class="price">$1.99</p>
+            <p class="price">$8.00</p>
             <p class="name">Instant Coffee
             </p>
         </div>
         <div class="item">
             <img src="images/Gemini_Generated_Image_haquzkhaquzkhaqu.png" alt="instant-milk" />
-            <p class="price">$0.99</p>
+            <p class="price">$9.50</p>
             <p class="name">Instant Coffee - Milk
             </p>
         </div>
         <div class="item">
             <img src="images/Gemini_Generated_Image_5g3qe95g3qe95g3q.png" alt="instant_gold" />
-            <p class="price">$2.99</p>
+            <p class="price">$9.50</p>
             <p class="name">Instant Coffee - Gold
             </p>
         </div>
         
         <div class="item">
             <img src="images/Gemini_Generated_Image_58uvbs58uvbs58uv.png" alt="instant-mini" class="" />
-            <p class="price">$0.19</p>
+            <p class="price">$0.50/stick</p>
             <p class="name">Instant Coffee - Mini
             </p>
         </div>
         <div class="item">
             <img src="images/Gemini_Generated_Image_biebcgbiebcgbieb.png" alt="instant_gold" />
-            <p class="price">$2.99</p>
+            <p class="price">$15.00</p>
             <p class="name">Instant Coffee - Cold Brew
             </p>
         </div>
@@ -157,31 +161,84 @@
         <div class="others grid">
         <div class="item">
             <img src="images/Gemini_Generated_Image_y7pb9py7pb9py7pb.png" alt="grinder" class="" />
-            <p class="price">$199.99</p>
+            <p class="price">$45.00</p>
             <p class="name">Coffee Grinder</p>
         </div>
         <div class="item">
             <img src="images/Gemini_Generated_Image_l6nvenl6nvenl6nv.png" alt="french_press" class="" />
-            <p class="price">$79.99</p>
+            <p class="price">$35.00</p>
             <p class="name">French Press</p>
 
         </div>
         <div class="item">
             <img src="images/Gemini_Generated_Image_9i8r5x9i8r5x9i8r.png" alt="mug" class=""/>
-            <p class="price">$9.99</p>
+            <p class="price">$15.00</p>
             <p class="name">Coffee Mug</p>
         </div>
-        <div class="item">
-            <img src="images/Gemini_Generated_Image_oujolroujolroujo.png" alt="mug" class=""/>
-            <p class="price">$9.99</p>
-            <p class="name">Pour-over Dripper</p>
-        </div>
         </div>
       </section>
-      <section id="purchase">
 
-      </section>
+
+
+
+
+
+      <section id="purchase">
+  
+    
+    <p class="estd">Order Now</p>
+    <h2>Get it Delivered</h2>
+    <div class="purchase-container">
+    <div class="purchase-1">
+    <p class="purchase-desc">
+      Fill out the form below to place your order. Our team will call you within 12 hours to confirm your items and delivery details. Once confirmed, we will ship your items right to your doorstep. Payment is handled via <strong>Cash on Delivery</strong> once your fresh roast arrives.
+    </p>
+
+    <div class="contact-info-short">
+      <span>📧 orders@farhancafe.com</span>
+      <span>📞 +880 1234-567890</span>
+    </div>
+</div>
+<div>
+    <form action="https://api.web3forms.com/submit" method="POST" class="order-form">
+      
+      <input type="hidden" name="access_key" value="6efbb5db-3aae-46a2-a68e-33ecd67850a1">
+      
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="John Doe" required>
+      </div>
+
+      <div class="input-group">
+        <label>Delivery Address</label>
+        <input type="text" name="address" placeholder="House #, Street, Area" required>
+      </div>
+
+      <div class="input-group">
+        <label>Contact Number</label>
+        <input type="tel" name="phone" placeholder="+880" required>
+      </div>
+
+      <div class="input-group">
+        <label>Your Order Details</label>
+        <textarea name="Order Description" rows="4" placeholder="Example: 2x Dark Roasted Beans, 1x Coffee Grinder..."></textarea>
+      </div>
+
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <button type="submit" class="btn1">CONFIRM ORDER</button>
+    </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
     </main>
+
     <footer id="footer">
  <div class="footer-content">
     <div class="footer-section">
